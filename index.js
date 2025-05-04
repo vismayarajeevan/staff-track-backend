@@ -1,9 +1,11 @@
-require('dotenv').config();
 const express = require('express')
 const cors = require('cors')
 
 // import port from config
 const {PORT} = require('./src/config/config')
+
+// database
+require('./src/database/db')
 
 
 const app = express()
@@ -12,6 +14,6 @@ app.use(express.json())
 
 
 app.listen(PORT,()=>{
-    console.log(`Server start running on port ${PORT}`);
+    console.log(`Server start running on port ${PORT} 🚀`);
     
 })
